@@ -2,11 +2,11 @@
 
 void checkThread()
 {
-	/*outputPiDDBCache();
+	outputPiDDBCache();
 	outputKernelHashBucketList();
 	outputPEProcessHashBucketList();
 	loopCiValidationList();
-	loopCiEaCacheList();*/
+	loopCiEaCacheList();
 	outputMmUnloadedDrv();
 }
 
