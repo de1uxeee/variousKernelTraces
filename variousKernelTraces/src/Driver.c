@@ -2,11 +2,12 @@
 
 void checkThread()
 {
-	outputPiDDBCache();
+	/*outputPiDDBCache();
 	outputKernelHashBucketList();
 	outputPEProcessHashBucketList();
 	loopCiValidationList();
-	loopCiEaCacheList();
+	loopCiEaCacheList();*/
+	outputMmUnloadedDrv();
 }
 
 NTSTATUS DriverEntry(PVOID driver, PUNICODE_STRING path)

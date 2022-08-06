@@ -36,6 +36,19 @@ void outputKernelHashBucketList()
 	}
 }
 
+void outputMmUnloadedDrv()
+{
+	PVOID mMUnloadedDrvPtr = *(PVOID*)0xfffff8057a23d790;
+	PMM_UNLOADED_DRIVER mMUnloadedDrv = (PMM_UNLOADED_DRIVER)mMUnloadedDrvPtr;
+
+	for (SIZE_T i = 0; i < 50; i++)
+	{
+		PMM_UNLOADED_DRIVER currDrv = &mMUnloadedDrv[i];
+		if (currDrv->drvName.Length > 0)
+			DebugLog("driver name: %wZ, unload time: %llx\n", &currDrv->drvName, currDrv->unloadTime);
+	}
+}
+
 void outputPEProcessHashBucketList()
 {
 	PRTL_AVL_TABLE listPEHash = (PRTL_AVL_TABLE)0xfffff80706b5c070; //find by yourself
